@@ -6,6 +6,7 @@ Este juego de la serpiente está realizado en Python utilizando diferentes bibli
 Antes de ejecutar el juego, se debe asegurar de tener instalado:
 -Python 3.11
 -pygame 2.6.1
+De igual manera tener descargadas las imagenes.jpg para que el juego las reconozca y las aplique en el juego, deben estar en la misma carpeta que el .py.
 # Python - Última versión
 En este caso, tuve que descargar la última versión de Python para poder instalar Pygame y tener también disponible pip.
 Ingresé a la página oficial de Python, descargué la última versión y le di clic a “Agregar al PATH”. Así, mi sistema reconoció a Python y pude instalar Pygame, tanto para mi laptop como para Spyder.
