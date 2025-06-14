@@ -84,7 +84,7 @@ Aquí declaré la variable INI (de "inicio") para cargar la imagen de bienvenida
 # Bucle principal del juego (main())
 Esta es la parte central del código, la que hace funcionar el juego. Primero declaré como global las variables x, y, dx y dy, para poder usarlas dentro de main() si fueron definidas fuera. Después creé un bucle que mantiene el juego corriendo mientras la ventana no se cierre. Usé if evento.key == pygame.K_... para detectar las teclas que el jugador presiona (arriba, abajo, izquierda, derecha) y cambiar el movimiento de la serpiente con base en SERPIENTE_VEL.
 Dentro del mismo bucle, se actualiza la posición de la serpiente sumando (dx, dy) a (x, y). Utilizando la biblioteca math, calculo la distancia entre la cabeza de la serpiente y la comida para detectar colisiones. También implementé las condiciones para perder: chocar contra los bordes o con su propio cuerpo, lo que activa la pantalla de "GAME OVER".
-Al final, uso:
+Al final, use:
 if __name__ == "__main__":
     bienvenida()
     main()
