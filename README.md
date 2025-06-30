@@ -84,11 +84,32 @@ Aquí declaré la variable INI (de "inicio") para cargar la imagen de bienvenida
 # Bucle principal del juego (main())
 Esta es la parte central del código, la que hace funcionar el juego. Primero declaré como global las variables x, y, dx y dy, para poder usarlas dentro de main() si fueron definidas fuera. Después creé un bucle que mantiene el juego corriendo mientras la ventana no se cierre. Usé if evento.key == pygame.K_... para detectar las teclas que el jugador presiona (arriba, abajo, izquierda, derecha) y cambiar el movimiento de la serpiente con base en SERPIENTE_VEL.
 Dentro del mismo bucle, se actualiza la posición de la serpiente sumando (dx, dy) a (x, y). Utilizando la biblioteca math, calculo la distancia entre la cabeza de la serpiente y la comida para detectar colisiones. También implementé las condiciones para perder: chocar contra los bordes o con su propio cuerpo, lo que activa la pantalla de "GAME OVER".
-Al final, use:
+Al final, usé este bloque:
+python
 if __name__ == "__main__":
     bienvenida()
-    main()
+    main_con_estado(intentos_maximos, 0, 0, 0)
 Este bloque permite que el juego inicie correctamente mostrando la pantalla de bienvenida, y luego comience el bucle principal.
+#ACTUALIZACION
+#Menu principal interactivo
+Cuenta con cuatro botones visuales que el jugador puede seleccionar con el mouse:
+- Jugar: Inicia el juego tras ingresar nombre e intentos (1 a 3).
+- Reglas: Explica cómo jugar y qué condiciones provocan pérdida.
+- Estadísticas: Muestra todas las partidas anteriores y un resumen total.
+- Salir: Cierra el programa de forma segura.
+#Funciones y mejoras implementadas
+- Gestión de intentos: El jugador no pierde de inmediato. Puede fallar hasta tres veces.
+- Sistema de estadísticas: Se almacena cada partida con manzanas comidas, colisiones con pared y con cuerpo.
+- Aumento de dificultad: La velocidad aumenta automáticamente cada pocas manzanas.
+- Pantalla de victoria: Si se llena el tablero, se muestra una pantalla de "¡VICTORIA!" y se guarda la partida.
+- Nombre personalizado: Cada jugador ingresa su nombre al comenzar.
+- Regreso al menú: Desde cualquier pantalla, se puede volver al menú presionando ESC.
+#Comida
+Ahora al comer 2 manzanas se aumenta la velocidad de la serpiente
+#Concluciones
+Este proyecto fue un gran desafío que me permitió practicar todo lo aprendido durante el curso: estructuras de control, funciones, eventos, manejo de listas, y lógica de juego. Aprendí a dividir tareas por funciones, a detectar colisiones con precisión, y a crear una experiencia completa para el usuario con menús, pantallas finales y seguimiento de estadísticas. También fortalecí habilidades de trabajo con bibliotecas externas, solución de errores y documentación del proceso. Me siento orgulloso del resultado final: un juego funcional, visualmente atractivo, y completo a nivel técnico.
+
+
 
 
 
